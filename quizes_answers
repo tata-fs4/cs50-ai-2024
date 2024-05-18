@@ -1,0 +1,238 @@
+======================================================================= QUIZ 0 =======================================================================
+Question 1: 
+Between depth first search (DFS) and breadth first search (BFS), which will find a shorter path through a maze?
+Answer: BFS will sometimes, but not always, find a shorter path than DFS
+
+Question 2:
+Consider the below maze. Grey cells indicate walls. A search algorithm was run on this maze, and found the yellow highlighted path from point A to B. In doing so, the red highlighted cells were the states explored but that did not lead to the goal.
+Of the four search algorithms discussed in lecture — depth-first search, breadth-first search, greedy best-first search with Manhattan distance heuristic, and A* search with Manhattan distance heuristic — which one (or multiple, if multiple are possible) could be the algorithm used?
+Answer: Could only be DFS
+
+Question 3:
+Why is depth-limited minimax sometimes preferable to minimax without a depth limit?
+Answer:
+Depth-limited minimax can arrive at a decision more quickly because it explores fewer states
+
+Question 4:
+Consider the Minimax tree below, where the green up arrows indicate the MAX player and red down arrows indicate the MIN player. The leaf nodes are each labelled with their value.
+Answer: 
+5
+
+
+
+======================================================================= QUIZ 1 =======================================================================
+Question 1:
+Consider these logical sentences:
+
+If Hermione is in the library, then Harry is in the library.
+Hermione is in the library.
+Ron is in the library and Ron is not in the library.
+Harry is in the library.
+Harry is not in the library or Hermione is in the library.
+Ron is in the library or Hermione is in the library.
+Which of the following logical entailments is true?
+
+Sentence 6 entails Sentence 2
+Sentence 1 entails Sentence 4
+Sentence 6 entails Sentence 3
+Sentence 2 entails Sentence 5
+Sentence 1 entails Sentence 2
+Sentence 5 entails Sentence 6
+Answer:
+Sentence 2 entails Sentence 5
+
+Question 2:
+There are other logical connectives that exist, other than the ones discussed in lecture. One of the most common is “Exclusive Or” (represented using the symbol ⊕). The expression A ⊕ B represents the sentence “A or B, but not both.” Which of the following is logically equivalent to A ⊕ B?
+
+(A ∨ B) ∧ ¬ (A ∧ B)
+(A ∧ B) ∨ ¬ (A ∨ B)
+(A ∨ B) ∧ (A ∧ B)
+(A ∨ B) ∧ ¬ (A ∨ B)
+Answer:
+(A ∨ B) ∧ ¬ (A ∧ B)
+
+Question 3:
+Let propositional variable R be that “It is raining,” the variable C be that “It is cloudy,” and the variable S be that “It is sunny.” Which of the following a propositional logic representation of the sentence “If it is raining, then it is cloudy and not sunny.”?
+
+(R → C) ∧ ¬S
+R → C → ¬S
+R ∧ C ∧ ¬S
+R → (C ∧ ¬S)
+(C ∨ ¬S) → R
+Answer:
+R → (C ∧ ¬S)
+
+Question 4:
+Consider, in first-order logic, the following predicate symbols. Student(x) represents the predicate that “x is a student.” Course(x) represents the predicate that “x is a course.” Enrolled(x, y) represents the predicate that “x is enrolled in y.” Which of the following is a first-order logic translation of the sentence “There is a course that Harry and Hermione are both enrolled in.”?
+
+∃x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
+∀x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
+∃x. Enrolled(Harry, x) ∧ ∃y. Enrolled(Hermione, y)
+∀x. Enrolled(Harry, x) ∧ ∀y. Enrolled(Hermione, y)
+∃x. Enrolled(Harry, x) ∨ Enrolled(Hermione, x)
+∀x. Enrolled(Harry, x) ∨ Enrolled(Hermione, x)
+Answer: 
+∃x. Course(x) ∧ Enrolled(Harry, x) ∧ Enrolled(Hermione, x)
+
+
+
+======================================================================= QUIZ 2 =======================================================================
+Question 1:
+Consider a standard 52-card deck of cards with 13 card values (Ace, King, Queen, Jack, and 2-10) in each of the four suits (clubs, diamonds, hearts, spades). If a card is drawn at random, what is the probability that it is a spade or a two?
+Answer:
+About 0.308
+
+Question 2:
+Imagine flipping two fair coins, where each coin has a Heads side and a Tails side, with Heads coming up 50% of the time and Tails coming up 50% of the time. What is probability that after flipping those two coins, one of them lands heads and the other lands tails?
+Answer:
+0.5 = 1/2
+
+Question 3:
+Recall the Bayesian Network shown in lecture, reproduced below.
+Answer:
+Assuming we know the train is on time, whether or not there is track maintenance does not affect the probability that the appointment is attended.
+
+Question 4:
+Two factories — Factory A and Factory B — design batteries to be used in mobile phones. Factory A produces 60% of all batteries, and Factory B produces the other 40%. 2% of Factory A’s batteries have defects, and 4% of Factory B’s batteries have defects. What is the probability that a battery is both made by Factory A and defective?
+Answer: 
+0.012
+
+
+
+
+======================================================================= QUIZ 3 =======================================================================
+Question 1:
+For which of the following will you always find the same solution, even if you re-run the algorithm multiple times?
+
+Assume a problem where the goal is to minimize a cost function, and every state in the state space has a different cost.
+Answer:
+Steepest-ascent hill-climbing, each time starting from the same starting state
+
+Question 2:
+Consider this optimization problem:
+
+A farmer is trying to plant two crops, Crop 1 and Crop 2, and wants to maximize his profits. The farmer will make $500 in profit from each acre of Crop 1 planted, and will make $400 in profit from each acre of Crop 2 planted.
+
+However, the farmer needs to do all of his planting today, during the 12 hours between 7am and 7pm. Planting an acre of Crop 1 takes 3 hours, and planting an acre of Crop 2 takes 2 hours.
+
+The farmer is also limited in terms of supplies: he has enough supplies to plant 10 acres of Crop 1 and enough supplies to plant 4 acres of Crop 2.
+
+Assume the variable C1 represents the number of acres of Crop 1 to plant, and the variable C2 represents the number of acres of Crop 2 to plant.
+
+What would be a valid objective function for this problem?
+Answer:
+500 * C1 + 400 * C2
+
+Question 3:
+Consider the same optimization problem as in Question 2. What are the constraints for this problem?
+Answer: 
+3 * C1 + 2 * C2 <= 12; C1 <= 10; C2 <= 4
+
+Question 4:
+Consider the below exam scheduling constraint satisfaction graph, where each node represents a course. Each course is associated with an initial domain of possible exam days (most courses could be on Monday, Tuesday, or Wednesday; a few are already restricted to just a single day). An edge between two nodes means that those two classes must have exams on different days.
+Answer: 
+C’s domain is {Mon}, D’s domain is {Mon, Wed}, E’s domain is {Tue, Wed}
+
+
+
+
+======================================================================= QUIZ 4 =======================================================================
+Question 1:
+Categorize the following: A social network’s AI uses existing tagged photos of people to identify when those people appear in new photos.
+Answer:
+This is an example of supervised learning
+
+Question 2:
+Imagine a regression AI that makes the following predictions for the following 5 data points. What is the total L2 loss across all of these data points (i.e., the sum of all the individual L2 losses for each data point)?
+Answer:
+16
+
+Question 3:
+If Hypothesis 1 has a lower L1 loss and a lower L2 loss than Hypothesis 2 on a set of training data, why might Hypothesis 2 still be a preferable hypothesis?
+Answer:
+Hypothesis 1 might be the result of overfitting.
+
+Question 4:
+In the ε-greedy approach to action selection in reinforcement learning, which of the following values of ε makes the approach identical to a purely greedy approach?
+Answer: 
+ε = 0
+
+
+
+
+======================================================================= QUIZ 5 =======================================================================
+Question 1:
+Consider the below neural network, where we set:
+
+w0 = -5
+w1 = 2
+w2 = -1 and
+w3 = 3.
+x1, x2, and x3 represent input neurons, and y represents the output neuron.
+
+What value will this network compute for y given inputs x1 = 3, x2 = 2, and x3 = 4 if we use a step activation function? What if we use a ReLU activation function?
+Answer:
+1 for step activation function, 11 for ReLU activation function
+
+Question 2:
+How many total weights (including biases) will there be for a fully connected neural network with a single input layer with 3 units, a single hidden layer with 5 units, and a single output layer with 4 units?
+Answer:
+44
+
+Question 3:
+Consider a recurrent neural network that listens to a audio speech sample, and classifies it according to whose voice it is. What network architecture is the best fit for this problem?
+Answer:
+Many-to-one (multiple inputs, single output)
+
+Question 4:
+Consider a 4x4 grayscale image with the following pixel values.
+
+What would be the result of applying a 2x2 max-pool to the original image?
+Answer: 
+[[16, 12], [32, 28]]
+
+
+
+
+
+======================================================================= QUIZ 6 ======================================================================= 
+Question 1:
+Consider the below context-free grammar, where S is the start symbol.
+
+S -> NP V
+NP -> N | A NP
+A -> "small" | "white"
+N -> "cats" | "trees"
+V -> "climb" | "run"
+Consider also the following four sentences.
+
+Cats run.
+Cats climb trees.
+Small cats run.
+Small white cats climb.
+Of the four sentences above, which sentences can be derived from the context-free grammar?
+Answer:
+Sentence 1, Sentence 3, and Sentence 4.
+
+Question 2:
+Which of the following is not a true statement?
+
+Attention mechanisms can be used to determine which parts of an input sequence are most important to focus on.
+One-hot representations of words better represent word meaning than distributed representations of words.
+Transformers can be faster to train than recurrent neural networks because they are more easily parallelized.
+A Naive Bayes Classifier assumes that the order of words doesn’t matter when determining how they should be classified.
+Answer:
+One-hot representations of words better represent word meaning than distributed representations of words.
+
+Question 3:
+Why is “smoothing” useful when applying Naive Bayes?
+Answer:
+Smoothing allows Naive Bayes to better handle cases where evidence has never appeared for a particular category.
+
+Question 4:
+From the phrase “must be the truth”, how many word n-grams of length 2 can be extracted?
+Answer: 
+3
+
+
+======================================================================= FINAL =======================================================================
